@@ -1,0 +1,77 @@
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+}
+
+.mat-card {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 160px;
+    border-bottom-left-radius: 160px;
+}
+
+.vl {
+    border-left: 1px solid #a1a3b1;
+    margin: 0 15px;
+    height: 300px;
+}
+
+.my-font {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 32pt;
+    color: #a2af5f;
+}
+
+.my-font-name {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20pt;
+    color: #ffffff;
+}
+
+.my-font-my {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18pt;
+    color: #ffffff;
+}
+
+.magin-font {
+    margin-top: 1.5rem;
+}
+
+.magin-div {
+    margin-left: 1rem;
+}
+
+.button {
+    margin-top: 1rem;
+    padding: 0 20px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: #53635d69;
+    border-radius: 25px
+}
+
+.padding {
+    padding-left: 4.2rem;
+}
+
+.mat-icon {
+    font-size: 50px;
+}
+
+.magin-icon {
+    margin-top: 2rem;
+    /* margin-right: 1rem; */
+    padding-left: 1rem;
+}
+
+.fa-icon {
+    font-size: 45px;
+    text-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+}
+
+.buttom-icon {
+    opacity: 1;
+}
