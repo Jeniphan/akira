@@ -15,7 +15,7 @@ export class AppComponent {
   particles: object = new particles().particlesOptions;
   title: string = "Hello.";
   my: string = "My name's"
-  name: string = "Jeniphan Pukkham.";
+  name: string = "Jetniphan Pukkham.";
   github = faGithub;
   facebook = faFacebook;
   ig = faInstagram;
