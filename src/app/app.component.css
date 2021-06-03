@@ -94,5 +94,6 @@ a:hover {
     }
     fa-icon {
         object-fit: cover;
+        font-size: 30px;
     }
 }
