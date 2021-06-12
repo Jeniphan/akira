@@ -92,9 +92,13 @@
             }
             fa-icon {
                 object-fit: cover;
-                font-size: 45px;
+                font-size: 60px;
             }
             .fill {
-                height: 45px
+                height: 60px
+            }
+            .fill a {
+                width: 100%;
+                height: 100%;
             }
         }
