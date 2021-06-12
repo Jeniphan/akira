@@ -1,0 +1,45 @@
+<ng-particles [id]="id" [options]="particles" (particlesLoaded)="particlesLoaded($event)" (particlesInit)="particlesInit($event)">
+</ng-particles>
+
+<div class="h-100 row align-items-center">
+    <div class="col">
+        <div class="container-lg d-flex justify-content-center">
+            <div class="w-50">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 d-flex justify-content-center">
+                        <img class="rounded-circle bg-white" src="assets/profile.JPG">
+                    </div>
+
+                    <div class="col-xl-6 d-grid gap-3">
+
+                        <h1 class="d-flex justify-content-center">{{title}}</h1>
+                        <h2 class="d-flex justify-content-center">{{my}}</h2>
+                        <h3 class="d-flex justify-content-center">{{name}}</h3>
+
+                        <div class="d-flex justify-content-center">
+                            <button mat-raised-button class="button">Who am i</button>
+                        </div>
+
+                        <div class="d-flex justify-content-center d-grid gap-3 fill">
+                            <a href="https://www.facebook.com/jeniphan.pukkham">
+                                <button mat-icon-button aria-label="Example icon-button with a heart icon">
+                                    <fa-icon [icon]="facebook"></fa-icon>
+                                </button>
+                            </a>
+                            <a href="https://github.com/Jeniphan">
+                                <button mat-icon-button aria-label="Example icon-button with a heart icon">
+                                    <fa-icon [icon]="github"></fa-icon>
+                                </button>
+                            </a>
+                            <a href="https://www.instagram.com/jetniphan_pk/">
+                                <button mat-icon-button aria-label="Example icon-button with a heart icon">
+                                    <fa-icon [icon]="ig"></fa-icon>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,9 +12,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { AkiraComponent } from './akira/akira.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AkiraComponent
   ],
   imports: [
     BrowserModule,

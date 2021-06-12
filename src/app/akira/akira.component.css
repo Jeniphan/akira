@@ -1,0 +1,100 @@
+        .bg {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: auto;
+        }
+        
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+            height: 250px;
+            width: 250px;
+            box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .vl {
+            border-left: 1px solid #a1a3b1;
+            margin: 0 15px;
+            height: 300px;
+        }
+        
+        body {
+            height: 100%;
+        }
+        
+        h1 {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 32pt;
+            color: #a2af5f;
+        }
+        
+        h2 {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 18pt;
+            color: rgb(255, 255, 255);
+            padding: auto;
+        }
+        
+        h3 {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 20pt;
+            color: rgb(255, 255, 255);
+        }
+        
+        .button {
+            /* margin-top: auto;
+    padding: auto; */
+            font-family: 'Noto Sans KR', sans-serif;
+            color: rgb(255, 255, 255);
+            background-color: #53635d69;
+            border-radius: 25px
+        }
+        
+        fa-icon {
+            font-size: 45px;
+            object-fit: cover;
+            text-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        a:hover {
+            transform: scale(1.2);
+        }
+        
+        .button:hover {
+            transform: scale(1.2);
+        }
+        /*  */
+        
+        @media screen and (max-width:480px) {
+            img {
+                border-radius: 50%;
+                object-fit: cover;
+                height: 100px;
+                width: 100px;
+                box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+            }
+            h1 {
+                margin-top: 1rem;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 28pt;
+                color: #a2af5f;
+            }
+            h2 {
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 16pt;
+                color: rgb(255, 255, 255);
+                align-items: center;
+            }
+            h3 {
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 12pt;
+                color: rgb(255, 255, 255);
+                align-items: center;
+            }
+            fa-icon {
+                object-fit: cover;
+                font-size: 45px;
+            }
+            .fill {
+                height: 45px
+            }
+        }
