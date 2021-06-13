@@ -13,11 +13,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AkiraComponent } from './akira/akira.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AkiraComponent
+    AkiraComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
