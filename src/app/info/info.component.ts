@@ -12,4 +12,9 @@ export class InfoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  Date: string = 'Aprill, 2018 - Present'
+  university: string = `King Mongkut's University of Technology Thonburi`
+  major: string = 'Electronic and Telecommunication Dept.'
+  hightschool: string = 'Soemngam Witthayakhom School'
+  majorschool: string = 'Sciences and Mathematics Program'
 }

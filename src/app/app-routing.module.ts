@@ -9,7 +9,7 @@ const routes: Routes = [
     component: AkiraComponent
   },
   {
-    path: 'jetniphan',
+    path: 'aboutme',
     component: InfoComponent
   }];
 

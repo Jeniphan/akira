@@ -1,0 +1,71 @@
+.image {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+}
+
+.name {
+    text-align: center;
+}
+
+.contents {
+    margin-top: 1rem;
+}
+
+.imge-ed,
+.imge-ex,
+.imge-es,
+.imge-per,
+.imge-ct {
+    width: 40px;
+    height: 40px;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+.name h1 {
+    text-transform: uppercase;
+}
+
+.text-ed,
+.text-ex,
+.text-sk,
+.text-per,
+.text-ct {
+    text-transform: uppercase;
+}
+
+.content-ed,
+.content-ex,
+.content-ex,
+.content-per,
+.content-ct {
+    width: 80%
+}
+
+.color-icon {
+    color: #0000005c;
+}
+
+.date,
+.name-school {
+    margin-left: 1rem;
+}
+
+.univer,
+.h-school {
+    text-transform: uppercase;
+}
+
+.univer-data,
+.school-data {
+    margin-left: 1rem;
+}
+
+.divi {
+    margin-top: 8px;
+}

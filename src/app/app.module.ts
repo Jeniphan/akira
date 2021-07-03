@@ -14,6 +14,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AkiraComponent } from './akira/akira.component';
 import { InfoComponent } from './info/info.component';
+import { MatListModule } from '@angular/material/list';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { InfoComponent } from './info/info.component';
     MatDividerModule,
     MatIconModule,
     MatButtonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
