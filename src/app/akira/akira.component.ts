@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Container, Main } from 'ng-particles';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Container, Main } from 'ng-particles';
 import { particles } from '../models/particles.model';
 
 @Component({

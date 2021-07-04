@@ -1,6 +1,7 @@
+import { NgParticlesModule } from "ng-particles";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgParticlesModule } from "ng-particles";
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { InfoComponent } from './info/info.component';
 import { MatListModule } from '@angular/material/list';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,12 +31,12 @@ import { MatListModule } from '@angular/material/list';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    NgParticlesModule,
     MatDividerModule,
     MatIconModule,
     MatButtonModule,
     FontAwesomeModule,
-    MatListModule
+    MatListModule,
+    NgParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
