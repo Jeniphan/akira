@@ -64,14 +64,16 @@ h4 {
 .univer,
 .h-school,
 .who,
-.work-ex {
+.work-ex,
+.developer {
     font-family: 'Noto Sans JP', sans-serif;
     text-transform: uppercase;
 }
 
 .univer-data,
 .school-data,
-.two-b {
+.two-b,
+.development {
     margin-left: 1rem;
 }
 
