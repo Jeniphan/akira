@@ -3,7 +3,7 @@
     object-fit: cover;
     height: 250px;
     width: 250px;
-    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .name {
@@ -105,4 +105,9 @@ h4 {
 .skills,
 .contact {
     margin-top: 1rem;
+}
+
+.footer {
+    margin-top: 1rem;
+    text-align: center;
 }
