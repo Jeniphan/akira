@@ -1,13 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-info',
   templateUrl: './info.component.html',
-  styleUrls: ['./info.component.css']
+  styleUrls: ['./info.component.css'],
 })
 export class InfoComponent implements OnInit {
 
   constructor() { }
+  isOpen = true;
 
   ngOnInit(): void {
   }
