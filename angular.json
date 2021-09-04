@@ -37,7 +37,7 @@
                             "ng2-flatpickr",
                             "tsparticles"
                         ],
-                        "outputPath": "dist/akira",
+                        "outputPath": "dist/akira/browser",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -149,6 +149,65 @@
                 "deploy": {
                     "builder": "angular-cli-ghpages:deploy",
                     "options": {}
+                },
+                "server": {
+                    "builder": "@angular-devkit/build-angular:server",
+                    "options": {
+                        "outputPath": "dist/akira/server",
+                        "main": "server.ts",
+                        "tsConfig": "tsconfig.server.json",
+                        "optimization": false,
+                        "sourceMap": true,
+                        "extractLicenses": false
+                    },
+                    "configurations": {
+                        "production": {
+                            "outputHashing": "media",
+                            "fileReplacements": [
+                                {
+                                    "replace": "src/environments/environment.ts",
+                                    "with": "src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "sourceMap": false,
+                            "extractLicenses": true
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve-ssr": {
+                    "builder": "@nguniversal/builders:ssr-dev-server",
+                    "configurations": {
+                        "development": {
+                            "browserTarget": "akira:build:development",
+                            "serverTarget": "akira:server:development"
+                        },
+                        "production": {
+                            "browserTarget": "akira:build:production",
+                            "serverTarget": "akira:server:production"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                },
+                "prerender": {
+                    "builder": "@nguniversal/builders:prerender",
+                    "options": {
+                        "routes": [
+                            "/"
+                        ]
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "akira:build:production",
+                            "serverTarget": "akira:server:production"
+                        },
+                        "development": {
+                            "browserTarget": "akira:build:development",
+                            "serverTarget": "akira:server:development"
+                        }
+                    },
+                    "defaultConfiguration": "production"
                 }
             }
         }

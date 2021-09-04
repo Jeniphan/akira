@@ -27,7 +27,7 @@ import { MatListModule } from '@angular/material/list';
     InfoComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,

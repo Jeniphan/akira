@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -12,7 +13,13 @@ import { particles } from '../models/particles.model';
 })
 export class AkiraComponent implements OnInit {
 
-  constructor() { }
+  metaData = {
+    name: 'Jetniphan Pukkham - @All about me',
+    description: 'Hello my name is Jetniphan Pukkham. This all about for me.',
+
+  }
+
+  constructor(private titles: Title, private meta: Meta) { }
 
   id = "tsparticles";
   particles: object = new particles().particlesOptions;
@@ -25,6 +32,14 @@ export class AkiraComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.titles.setTitle(this.metaData.name);
+    this.meta.addTags([
+      { name: 'og:type', content: 'article' },
+      { name: 'og:url', content: '/home' },
+      { name: 'og:title', content: this.metaData.name },
+      { name: 'og:description', content: this.metaData.description },
+      // { name: 'og:image', content: this.metaData.image }
+    ]);
   }
 
   particlesLoaded(container: Container): void {

@@ -16,15 +16,18 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'home'
   },
-  //   {
-  //     path: '',
-  //     redirectTo: 'home',
-  //     pathMatch: 'full'
-  //   }
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    useHash: false,
+    initialNavigation: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
