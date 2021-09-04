@@ -5,13 +5,23 @@ import { InfoComponent } from './info/info.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: AkiraComponent
   },
   {
     path: 'aboutme',
     component: InfoComponent
-  }];
+  },
+  {
+    path: '**',
+    redirectTo: 'home'
+  },
+  //   {
+  //     path: '',
+  //     redirectTo: 'home',
+  //     pathMatch: 'full'
+  //   }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
