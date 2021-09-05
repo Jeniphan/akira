@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
+declare var gtag: any;
 
 @Component({
   selector: 'app-root',
@@ -6,6 +9,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'analytics';
+
+  constructor(router: Router) {
+    const navEndEvents = router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+    );
+
+    navEndEvents.subscribe((event: any) => {
+      gtag('config', 'G-EYYLDEQ6LY', {
+        'page_path': event.urlAfterRedirects
+      });
+    })
+  }
+
 
   ngOnInit(): void {
 
