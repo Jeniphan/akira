@@ -1,2 +1,14 @@
 -build
   > ng build --prod --output-path docs --base-href https://jeniphan.github.io/akira/
+
+
+#1 no sub-folder
+- ng build --prod (dist>....)
+- ng build --prod --extract-css=false (no_sub_folder)
+    > tsconfig.json --> es5
+
+#2 sub-folder
+- ng build --prod --base-href [/frontend/] (sub_folder)
+
+option:
+--output-path [folder]
