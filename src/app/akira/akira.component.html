@@ -1,48 +1,44 @@
-<ng-particles [id]="id" [options]="particles" (particlesLoaded)="particlesLoaded($event)" (particlesInit)="particlesInit($event)">
-</ng-particles>
+<div class="{{_mode.bgClass}}">
 
-<div class="h-100 row align-items-center">
-    <div class="col">
-        <div class="container-md d-flex justify-content-center h-100">
-            <div class="w-50">
-                <div class="row align-items-center">
-                    <div class="col-xl-6 d-flex justify-content-center">
-                        <img class="rounded-circle bg-white" src="assets/profile.JPG">
-                    </div>
+    <div class="dark d-flex flex-row-reverse">
+        <div class="btns">
+            <button type="button" class="btn btn-outline-primary" (click)="onMode()">
+                <ion-icon name="{{_mode.mode_icon}}" class="{{_mode.iconClass}}"></ion-icon>
+            </button>
+        </div>
+    </div>
 
-                    <div class="col-xl-6 d-grid gap-3 justify-content-center">
+    <div class="content">
+        <div class="all">
+            <div class="hero text-center">
+                <img class="rounded-circle bg-white col justify-content-end" src="assets/profile.JPG">
+            </div>
 
-                        <h1 class="d-flex justify-content-center">{{title}}</h1>
-                        <h2 class="d-flex justify-content-center">{{my}}</h2>
-                        <h3 class="d-flex justify-content-center">{{name}}</h3>
+            <div class="gap-3 text-center hero">
+                <h1>{{title}}</h1>
+                <h2>{{my}}</h2>
+                <h3>{{name}}</h3>
 
-                        <div class="d-flex justify-content-center">
-                            <button mat-raised-button class="button" [routerLink]="['/aboutme']">Who am i</button>
-                        </div>
+                <div class="text-center">
+                    <button mat-raised-button class="{{_mode.fontButtom}}" [routerLink]="['/aboutme']">
+                        About me.
+                        <ion-icon name="chevron-forward-circle-outline" class="ic-button"></ion-icon>
+                    </button>
+                </div>
 
-                        <div class="d-flex justify-content-center  gap-3 w-100">
-                            <a href="https://www.facebook.com/jeniphan.pukkham">
-
-                                <fa-icon [icon]="facebook"></fa-icon>
-
-                            </a>
-                            <a href="https://github.com/Jeniphan">
-
-                                <fa-icon [icon]="github"></fa-icon>
-
-                            </a>
-                            <a href="https://www.instagram.com/jetniphan_pk/">
-
-                                <fa-icon [icon]="ig"></fa-icon>
-
-                            </a>
-                        </div>
-                    </div>
+                <div class="gap-3 w-100">
+                    <a href="https://www.facebook.com/jeniphan.pukkham">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="https://github.com/Jeniphan">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jetniphan-pukkham-957671212/">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
-<footer class="footer">
-    Copyright © Jetniphan Pukkham. All right reserved.
-</footer>

@@ -1,413 +1,610 @@
-<div class="container">
+<div class="{{_mode.bgClass}}">
 
-    <div class="header row justify-content-center">
-        <div class="col-md-4 detail-ct">
-            <div class="d-flex justify-content-center">
-                <img class="image rounded-circle bg-white" src="assets/profile.JPG" alt="">
-            </div>
-        </div>
-        <div class="col-md-8 row align-items-center detail-ct">
-            <div class="col name">
-                <h1>Jetniphan Pukkham</h1>
-                <h3>Electronic and Telecommunication Dept.</h3>
-                <h4> 080-915-3786 | Jetniphan.2407@mail.kmutt.ac.th | Bangkok, Thailand</h4>
-            </div>
+    <div class="dark d-flex flex-row-reverse">
+        <div class="btns">
+            <button type="button" class="btn btn-outline-primary" (click)="onMode()">
+                <ion-icon name="{{_mode.mode_icon}}" class="{{_mode.iconClass}}"></ion-icon>
+            </button>
         </div>
     </div>
 
-
-    <div class="contents">
-        <div class="personal">
-            <div class="d-flex align-items-center gap-3 two-b">
-                <img class="imge-per " src="assets/man.png" alt="">
-                <h2 class="text-per">personal profile</h2>
-            </div>
-
-            <mat-divider class="divi"></mat-divider>
-
-            <div class="row justify-content-center">
-                <div class="content-profile row align-items-start">
-                    <div class="col-md-6 detail-ct">
-                        <h3 class="who">who am i</h3>
-                        <span>
-                            Hello. My name is Jetniphan Pukkham, everyone call me Jaay.
-                            I'm studying at King Mongkut's University of Technology Thonburi. My major was Electronic
-                            and Telecommunication Engineer. I'm interested about Web developmentm.
-
-                        </span>
-                    </div>
-
-                    <div class="col-md-6 detail-ct">
-                        <h3 class="who">presonal</h3>
-                        <span>
-                            A electronic engineering student with
-                            hands-on experience in electronic
-                            hardware, electronic disign PCB,
-                            Internet of Things and web development such as Angular Framework, Nodejs, Nestjs, Express.
-                        </span>
-                    </div>
+    <div class="container">
+        <div class="header row justify-content-center">
+            <div class="col-md-4 detail-ct">
+                <div class="d-flex justify-content-center">
+                    <img class="image rounded-circle bg-white" src="assets/profile.JPG" alt="">
                 </div>
-
             </div>
-        </div>
-
-        <div class="educat">
-            <div class="d-flex align-items-center gap-3 two-b">
-                <img class="imge-ed " src="assets/education.png" alt="">
-                <h2 class="text-ed">Education</h2>
-            </div>
-
-            <mat-divider class="divi"></mat-divider>
-
-            <div class="row justify-content-center">
-                <div class="content-ed row align-items-center">
-                    <div class="col detail-ct">
-                        <h3 class="univer">university</h3>
-                        <div class="univer-data">
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">today</i>
-                                <span class="date">{{Date}}</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">school</i>
-                                <span class="name-p">{{university}}</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">book</i>
-                                <span class="name-p">{{major}}</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col detail-ct">
-                        <h3 class="h-school">hight school</h3>
-                        <div class="school-data">
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">today</i>
-                                <span class="date">2015 - 2018</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon ">school</i>
-                                <span class="name-p">{{hightschool}}</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon ">book</i>
-                                <span class="name-p">{{majorschool}}</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-
+            <div class="col-md-8 row align-items-center detail-ct">
+                <div class="col name">
+                    <h1>Jetniphan Pukkham</h1>
+                    <h3>Electronic and Telecommunication Dept.</h3>
+                    <h4> 080-915-3786 | Jetniphan.2407@mail.kmutt.ac.th | Bangkok, Thailand</h4>
                 </div>
             </div>
         </div>
 
-        <div class=" exprerience ">
-            <div class="d-flex align-items-center gap-3 two-b">
-                <img class="imge-ex " src="assets/experience.png " alt=" ">
-                <h2 class="text-ex ">experience</h2>
-            </div>
+        <div class="contents">
+            <div class="personal">
+                <div class="d-flex align-items-center gap-3 two-b">
+                    <img class="imge-per " src="assets/man.png" alt="">
+                    <h2 class="text-per">personal profile</h2>
+                </div>
 
-            <mat-divider class="divi"></mat-divider>
+                <mat-divider class="divi"></mat-divider>
 
-            <div class="row justify-content-center ">
-                <div class="content-ex row align-items-start">
-                    <div class="col detail-ct">
-                        <h3 class="work-ex">project experience</h3>
-                        <div class="two-b">
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">today</i>
-                                <span class="date">April, 2017</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon ">local_activity</i>
-                                <span class="name-p">1st Award in 2B-KMUTT #14</span>
-                            </div>
-                            <div class="d-flex align-items-start top-icon">
-                                <i class="material-icons-round color-icon ">note</i>
-                                <span class="name-p">Design and create an Controlling the water system using for
-                                    Crayfish shrimp farming IOT project by using Arduino and ESP8266.</span>
-                            </div>
+                <div class="row justify-content-center">
+                    <div class="content-profile row align-items-start">
+                        <div class="col-md-6 detail-ct">
+                            <h3 class="who">who am i</h3>
+                            <span>
+                                Hello. My name is Jetniphan Pukkham, everyone call me Jaay.
+                                I'm studying at King Mongkut's University of Technology Thonburi. My major was
+                                Electronic
+                                and Telecommunication Engineer. I'm interested about Web developmentm.
+
+                            </span>
                         </div>
 
-                        <div class="two-b1">
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">today</i>
-                                <span class="date">April, 2019</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">local_activity</i>
-                                <span class="name-p">Intelligent Parking Project, BangMod Maker Club, KMUTT,
-                                    CAT</span>
-                            </div>
-                            <div class="d-flex align-items-start top-icon">
-                                <i class="material-icons-round color-icon">note</i>
-                                <span class="name-p">Member of BangMod Maker club to design and create an
-                                    Intelligent Parking by using CAT Lora borad.</span>
-                            </div>
-                        </div>
-
-                        <div class="two-b1">
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">today</i>
-                                <span class="date">September, 2020</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">local_activity</i>
-                                <span class="name-p">Robo Innovator Challenge 2020 by Software Park Thailand</span>
-                            </div>
-                            <div class="d-flex align-items-start top-icon">
-                                <i class="material-icons-round color-icon">note</i>
-                                <span class="name-p">Member of Raidee team to design and create AI car that can
-                                    self- driving and logistics for join competition by using ESP32 and NVIDIA
-                                    Jetson Nano.</span>
-                            </div>
-                        </div>
-
-                        <div class="two-b1">
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">today</i>
-                                <span class="date">October, 2020</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">local_activity</i>
-                                <span class="name-p">International Conference on Power, Energy and Innovation
-                                    (ICPEI), Ching Mai, THAILAND</span>
-                            </div>
-                            <div class="d-flex align-items-start top-icon">
-                                <i class="material-icons-round color-icon">note</i>
-                                <span class="name-p">Project Advisor to Monitoring Parameter of Three-Phase
-                                    Induction Motor Using IOT.</span>
-                            </div>
+                        <div class="col-md-6 detail-ct">
+                            <h3 class="who">presonal</h3>
+                            <span>
+                                A electronic engineering student with
+                                hands-on experience in electronic
+                                hardware, electronic disign PCB,
+                                Internet of Things and web development such as Angular Framework, Nodejs, Nestjs,
+                                Express.
+                            </span>
                         </div>
                     </div>
 
-                    <div class="col detail-ct">
-                        <div class="row">
-                            <h3 class="work-ex">Activity experience</h3>
+                </div>
+            </div>
+
+            <div class="educat">
+                <div class="d-flex align-items-center gap-3 two-b">
+                    <img class="imge-ed " src="assets/education.png" alt="">
+                    <h2 class="text-ed">Education</h2>
+                </div>
+
+                <mat-divider class="divi"></mat-divider>
+
+                <div class="row justify-content-center">
+                    <div class="content-ed row align-items-center">
+                        <div class="col detail-ct">
+                            <h3 class="univer">university</h3>
+                            <div class="univer-data">
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="today-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="date">
+                                        <span>{{Date}}</span>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="school-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>{{university}}</span>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="book-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>{{major}}</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col detail-ct">
+                            <h3 class="h-school">hight school</h3>
+                            <div class="school-data">
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="today-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="date">
+                                        <span>2015 - 2018</span>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="school-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>{{hightschool}}</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="book-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>{{majorschool}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" exprerience ">
+                <div class="d-flex align-items-center gap-3 two-b">
+                    <img class="imge-ex " src="assets/experience.png " alt=" ">
+                    <h2 class="text-ex ">experience</h2>
+                </div>
+
+                <mat-divider class="divi"></mat-divider>
+
+                <div class="row justify-content-center ">
+                    <div class="content-ex row align-items-start">
+                        <div class="col detail-ct">
+                            <h3 class="work-ex">project experience</h3>
                             <div class="two-b">
                                 <div class="d-flex align-items-center top-icon">
-                                    <i class="material-icons-round color-icon">today</i>
-                                    <span class="date">July, 2019</span>
+                                    <div>
+                                        <ion-icon name="today-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="date">
+                                        <span>April, 2017</span>
+                                    </div>
                                 </div>
                                 <div class="d-flex align-items-center top-icon">
-                                    <i class="material-icons-round color-icon">local_activity</i>
-                                    <span class="name-p">TUE ENE, KMUTT</span>
+                                    <div>
+                                        <ion-icon name="accessibility-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>1st Award in 2B-KMUTT #14</span>
+                                    </div>
                                 </div>
                                 <div class="d-flex align-items-start top-icon">
-                                    <i class="material-icons-round color-icon">note</i>
-                                    <span class="name-p">Member of Computer Programming tutor team to all freshmen
-                                        in
-                                        Electronic and Telecommunication Dept. by teaching and designing this
-                                        course.</span>
+                                    <div>
+                                        <ion-icon name="book-outline" class="color-icon">
+                                        </ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>Design and create an Controlling the water system using for
+                                            Crayfish shrimp farming IOT project by using Arduino and ESP8266.
+                                        </span>
+                                    </div>
+
                                 </div>
                             </div>
 
                             <div class="two-b1">
                                 <div class="d-flex align-items-center top-icon">
-                                    <i class="material-icons-round color-icon">today</i>
-                                    <span class="date">January 2020</span>
+                                    <div>
+                                        <ion-icon name="today-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="date">
+                                        <span>April, 2019</span>
+                                    </div>
                                 </div>
                                 <div class="d-flex align-items-center top-icon">
-                                    <i class="material-icons-round color-icon">local_activity</i>
-                                    <span class="name-p">E-CAMP 2020, KMUTT</span>
+                                    <div>
+                                        <ion-icon name="accessibility-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>Intelligent Parking Project, BangMod Maker Club, KMUTT,
+                                            CAT</span>
+                                    </div>
                                 </div>
                                 <div class="d-flex align-items-start top-icon">
-                                    <i class="material-icons-round color-icon">note</i>
-                                    <span class="name-p">Member of Digital Circuit and Logic Design tutor team in
-                                        E-CAMP
-                                        which is a camp for students who interested in electronics by teaching and
-                                        designing this course.</span>
+                                    <div>
+                                        <ion-icon name="book-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>
+                                            Member of BangMod Maker club to design and create an
+                                            Intelligent Parking by using CAT Lora borad.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="two-b1">
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="today-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="date">
+                                        <span>September, 2020</span>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="accessibility-outline" class="color-icon"></ion-icon>
+
+                                    </div>
+                                    <div class="name-p">
+                                        <span>Robo Innovator Challenge 2020 by Software Park Thailand</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start top-icon">
+                                    <div>
+                                        <ion-icon name="book-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>
+                                            Member of Raidee team to design and create AI car that can
+                                            self- driving and logistics for join competition by using ESP32 and NVIDIA
+                                            Jetson Nano.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="two-b1">
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="today-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="date">
+                                        <span>October, 2020</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="accessibility-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>International Conference on Power, Energy and Innovation
+                                            (ICPEI), Ching Mai, THAILAND</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start top-icon">
+                                    <div>
+                                        <ion-icon name="book-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>
+                                            Project Advisor to Monitoring Parameter of Three-Phase
+                                            Induction Motor Using IOT.
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row box-ex">
-                            <h3 class="work-ex">intern experience</h3>
-                            <div class="two-b">
-                                <div class="d-flex align-items-center top-icon">
-                                    <i class="material-icons-round color-icon">today</i>
-                                    <span class="date">Jun 1st, 2021 - Present</span>
+                        <div class="col detail-ct">
+                            <div class="row">
+                                <h3 class="work-ex">Activity experience</h3>
+                                <div class="two-b">
+                                    <div class="d-flex align-items-center top-icon">
+                                        <div>
+                                            <ion-icon name="today-outline" class="color-icon"></ion-icon>
+                                        </div>
+                                        <div class="date">
+                                            <span>July, 2019</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center top-icon">
+                                        <div>
+                                            <ion-icon name="accessibility-outline" class="color-icon"></ion-icon>
+                                        </div>
+                                        <div class="name-p">
+                                            <span>TUE ENE, KMUTT</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-start top-icon">
+                                        <div>
+                                            <ion-icon name="book-outline" class="color-icon"></ion-icon>
+                                        </div>
+                                        <div class="name-p">
+                                            <span>Member of Computer Programming tutor team to all freshmen
+                                                in
+                                                Electronic and Telecommunication Dept. by teaching and designing this
+                                                course.
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center top-icon">
-                                    <i class="material-icons-round color-icon">local_activity</i>
-                                    <span class="name-p">Software Engineer Intern.</span>
-                                </div>
-                                <div class="d-flex align-items-center top-icon">
-                                    <i class="material-icons-round color-icon">note</i>
-                                    <span class="name-p">TOYOTA TSUSHO DENSO ELECTRONIC(THAILAND)Co.,Ltd.</span>
+
+                                <div class="two-b1">
+                                    <div class="d-flex align-items-center top-icon">
+                                        <div>
+                                            <ion-icon name="today-outline" class="color-icon"></ion-icon>
+                                        </div>
+                                        <div class="date">
+                                            <span>January 2020</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center top-icon">
+                                        <div>
+                                            <ion-icon name="accessibility-outline" class="color-icon"></ion-icon>
+                                        </div>
+                                        <div class="name-p">
+                                            <span>E-CAMP 2020, KMUTT</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-start top-icon">
+                                        <div>
+                                            <ion-icon name="book-outline" class="color-icon"></ion-icon>
+                                        </div>
+                                        <div class="name-p">
+                                            <span>
+                                                Member of Digital Circuit and Logic Design tutor team in
+                                                E-CAMP
+                                                which is a camp for students who interested in electronics by teaching
+                                                and
+                                                designing this course.
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+                            <div class="row box-ex">
+                                <h3 class="work-ex">intern experience</h3>
+                                <div class="two-b">
+                                    <div class="d-flex align-items-center top-icon">
+                                        <div>
+                                            <ion-icon name="today-outline" class="color-icon"></ion-icon>
+                                        </div>
+                                        <div class="date">
+                                            <span>Jun 1st, 2021 - Present</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center top-icon">
+                                        <div>
+                                            <ion-icon name="accessibility-outline" class="color-icon"></ion-icon>
+                                        </div>
+                                        <div class="name-p">
+                                            <span>Software Engineer Intern.</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center top-icon">
+                                        <div>
+                                            <ion-icon name="book-outline" class="color-icon"></ion-icon>
+                                        </div>
+                                        <div class="name-p">
+                                            <span>TOYOTA TSUSHO DENSO ELECTRONIC(THAILAND)Co.,Ltd.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills ">
+                <div class="d-flex align-items-center gap-3 two-b">
+                    <img class="imge-es " src="assets/skills.png " alt=" ">
+                    <h2 class="text-sk ">skils</h2>
+                </div>
+
+                <mat-divider class="divi"></mat-divider>
+
+                <div class="row justify-content-center ">
+                    <div class="content-sk row align-items-start">
+                        <div class="col-md-4 detail-ct">
+                            <h3 class="developer">Web Developer skills</h3>
+                            <div class="univer-data">
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>Angular Framework.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>Express.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>Nestjs.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>Nodejs.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>CSS.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>HTML.</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
+                        <div class="col-md-4 detail-ct">
+                            <h3 class="developer">Programing languages skills</h3>
+                            <div class="univer-data">
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>TypeScript.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>JavaScript.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>C++.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>SQL.</span>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="code-slash-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>MIPs Assembly.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 detail-ct">
+                            <h3 class="developer">embedded systems skills</h3>
+                            <div class="univer-data">
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="game-controller-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>Arduino.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="game-controller-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>Respberry pi.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="game-controller-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>ESP8266.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="game-controller-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>ESP32.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center top-icon">
+                                    <div>
+                                        <ion-icon name="game-controller-outline" class="color-icon"></ion-icon>
+                                    </div>
+                                    <div class="name-p">
+                                        <span>CAT Lora.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
 
                 </div>
             </div>
-        </div>
 
-        <div class="skills ">
-            <div class="d-flex align-items-center gap-3 two-b">
-                <img class="imge-es " src="assets/skills.png " alt=" ">
-                <h2 class="text-sk ">skils</h2>
-            </div>
-
-            <mat-divider class="divi"></mat-divider>
-
-            <div class="row justify-content-center ">
-                <div class="content-sk row align-items-start">
-                    <div class="col-md-4 detail-ct">
-                        <h3 class="developer">Web Developer skills</h3>
-                        <div class="univer-data">
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">Angular Framework.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">Express.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">Nestjs.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">Nodejs.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">CSS.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">HTML.</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 detail-ct">
-                        <h3 class="developer">Programing languages skills</h3>
-                        <div class="univer-data">
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">TypeScript.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">JavaScript.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">C++.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">SQL.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">code</i>
-                                <span class="name-p">MIPs Assembly.</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 detail-ct">
-                        <h3 class="developer">embedded systems skills</h3>
-                        <div class="univer-data">
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">videogame_asset</i>
-                                <span class="name-p">Arduino.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">videogame_asset</i>
-                                <span class="name-p">Respberry pi.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">videogame_asset</i>
-                                <span class="name-p">ESP8266.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">videogame_asset</i>
-                                <span class="name-p">ESP32.</span>
-                            </div>
-                            <div class="d-flex align-items-center top-icon">
-                                <i class="material-icons-round color-icon">videogame_asset</i>
-                                <span class="name-p">CAT Lora.</span>
-                            </div>
-                        </div>
-                    </div>
-
+            <div class="contact ">
+                <div class="d-flex align-items-center gap-3 two-b">
+                    <img class="imge-ct " src="assets/contact.png " alt=" ">
+                    <h2 class="text-ct ">contact</h2>
                 </div>
 
-            </div>
-        </div>
+                <mat-divider class="divi"></mat-divider>
 
-        <div class="contact ">
-            <div class="d-flex align-items-center gap-3 two-b">
-                <img class="imge-ct " src="assets/contact.png " alt=" ">
-                <h2 class="text-ct ">contact</h2>
-            </div>
+                <div class="row justify-content-center ">
+                    <div class="content-ct ">
 
-            <mat-divider class="divi"></mat-divider>
-
-            <div class="row justify-content-center ">
-                <div class="content-ct ">
-
-                    <div class="d-flex justify-content-center detail-ct">
-                        <div class="d-flex align-items-center">
-                            <img class="imge-ct-d" src="assets/email.png" alt=" ">
-                            <a href="mailto:jetniphan.2407@mail.kmutt.ac.th" class="name-p">Jetniphan.2407@mail.kmutt.ac.th</a>
+                        <div class="d-flex justify-content-center detail-ct">
+                            <div class="d-flex align-items-center">
+                                <img class="imge-ct-d" src="assets/email.png" alt=" ">
+                                <a href="mailto:jetniphan.2407@mail.kmutt.ac.th" class="name-p">Jetniphan.2407@mail.kmutt.ac.th</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="d-flex justify-content-center detail-ct">
-                        <a href="https://github.com/Jeniphan">
-                            <div class="d-flex align-items-center">
-                                <img class="imge-ct-d" src="assets/github.png" alt=" ">
-                                <span class="name-p">Jeniphan</span>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div class="d-flex justify-content-center detail-ct">
-                        <a href="https://www.facebook.com/jeniphan.pukkham">
-                            <div class="d-flex align-items-center">
-                                <img class="imge-ct-d" src="assets/facebook.png" alt=" ">
-                                <span class="name-p">Jeniphan Pukkham</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="d-flex justify-content-center detail-ct">
-                        <div class="d-flex align-items-center">
-                            <a href="https://www.linkedin.com/in/jetniphan-pukkham-957671212/">
-                                <img class="imge-ct-d" src="assets/linkedin.png" alt=" ">
-                                <span class="name-p">Jetniphan Pukkham</span>
+                        <div class="d-flex justify-content-center detail-ct">
+                            <a href="https://github.com/Jeniphan">
+                                <div class="d-flex align-items-center">
+                                    <img class="imge-ct-d" src="assets/github.png" alt=" ">
+                                    <span class="name-p">Jeniphan</span>
+                                </div>
                             </a>
 
                         </div>
-                    </div>
 
-                    <div class="d-flex justify-content-center detail-ct">
-                        <div class="d-flex align-items-center">
-                            <img class="imge-ct-d" src="assets/telephone.png" alt=" ">
-                            <span class="name-p">080 - 915 - 3786</span>
+                        <div class="d-flex justify-content-center detail-ct">
+                            <a href="https://www.facebook.com/jeniphan.pukkham">
+                                <div class="d-flex align-items-center">
+                                    <img class="imge-ct-d" src="assets/facebook.png" alt=" ">
+                                    <span class="name-p">Jeniphan Pukkham</span>
+                                </div>
+                            </a>
                         </div>
+
+                        <div class="d-flex justify-content-center detail-ct">
+                            <div class="d-flex align-items-center">
+                                <a href="https://www.linkedin.com/in/jetniphan-pukkham-957671212/">
+                                    <img class="imge-ct-d" src="assets/linkedin.png" alt=" ">
+                                    <span class="name-p">Jetniphan Pukkham</span>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center detail-ct">
+                            <div class="d-flex align-items-center">
+                                <img class="imge-ct-d" src="assets/telephone.png" alt=" ">
+                                <span class="name-p">080 - 915 - 3786</span>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
         </div>
+        <footer class="footer">
+            Copyright © Jetniphan Pukkham. All right reserved.
+        </footer>
+
     </div>
-    <footer class="footer">
-        Copyright © Jetniphan Pukkham. All right reserved.
-    </footer>
 
 </div>

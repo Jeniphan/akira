@@ -16,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AkiraComponent } from './akira/akira.component';
 import { InfoComponent } from './info/info.component';
 import { MatListModule } from '@angular/material/list';
+import { IonicModule } from '@ionic/angular';
 
 
 
@@ -36,7 +37,8 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     FontAwesomeModule,
     MatListModule,
-    NgParticlesModule
+    NgParticlesModule,
+    IonicModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

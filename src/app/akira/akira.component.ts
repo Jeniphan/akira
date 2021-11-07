@@ -20,15 +20,14 @@ export class AkiraComponent implements OnInit {
   }
 
   constructor(private titles: Title, private meta: Meta) { }
-
-  id = "tsparticles";
-  particles: object = new particles().particlesOptions;
   title: string = "Hello.";
   my: string = "My name's"
   name: string = "Jetniphan Pukkham.";
   github = faGithub;
   facebook = faFacebook;
   ig = faInstagram;
+  mode: boolean = true;
+  _mode = new darkmode;
 
 
   ngOnInit(): void {
@@ -50,4 +49,30 @@ export class AkiraComponent implements OnInit {
     console.log(main);
   }
 
+  onMode() {
+    this.mode = !this.mode;
+    /*======================= This mode dark =====================*/
+    if (this.mode) {
+      this._mode = new darkmode
+    }
+    /*======================= This mode ligth =====================*/
+    else {
+      this._mode = new lightmode
+    }
+  }
+
+}
+
+export class lightmode {
+  mode_icon: string = "moon-outline";
+  bgClass = "main-ligth";
+  iconClass = "ligth-icon";
+  fontButtom = "button-light";
+}
+
+export class darkmode {
+  mode_icon: string = "sunny-outline";
+  bgClass = "main";
+  iconClass = "dark-icon";
+  fontButtom = "button";
 }
