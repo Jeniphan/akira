@@ -16,6 +16,7 @@ export class AkiraComponent implements OnInit {
   metaData = {
     name: 'Jetniphan Pukkham - @All about me.',
     description: 'Hello my name is Jetniphan Pukkham. This all about for me.',
+    image: 'assets/LINE_ALBUM_211017.jpg'
 
   }
 
@@ -37,7 +38,7 @@ export class AkiraComponent implements OnInit {
       { name: 'og:url', content: '/home' },
       { name: 'og:title', content: this.metaData.name },
       { name: 'og:description', content: this.metaData.description },
-      // { name: 'og:image', content: this.metaData.image }
+      { name: 'og:image', content: this.metaData.image }
     ]);
   }
 
