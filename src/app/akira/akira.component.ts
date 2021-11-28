@@ -1,10 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { NavigationEnd, Router } from '@angular/router';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { setMode } from 'ionicons/dist/types/stencil-public-runtime';
-import { Container, Main } from 'ng-particles';
+import { filter } from 'rxjs/operators';
+
+declare let gtag: Function;
 
 @Component({
   selector: 'app-akira',
@@ -16,10 +18,14 @@ export class AkiraComponent implements OnInit {
   metaData = {
     name: 'Jetniphan Pukkham - @All about me.',
     description: 'Hello my name is Jetniphan Pukkham. This all about for me.',
-    image: 'assets/profile.png'
+    image: 'profile.png'
   }
 
-  constructor(private titles: Title, private meta: Meta) { }
+  constructor(
+    private titles: Title,
+    private meta: Meta,
+    private router: Router
+  ) { }
   title: string = "Hello.";
   my: string = "My name's"
   name: string = "Jetniphan Pukkham.";
@@ -34,12 +40,25 @@ export class AkiraComponent implements OnInit {
     this.titles.setTitle(this.metaData.name);
     this.meta.addTags([
       { name: 'og:type', content: 'article' },
-      { name: 'og:url', content: '/home' },
+      { name: 'og:url', content: '' },
       { name: 'og:title', content: this.metaData.name },
       { name: 'og:description', content: this.metaData.description },
       { name: 'og:image', content: this.metaData.image }
     ]);
     this.setMode();
+    this.setUpAnalytics();
+  }
+
+  setUpAnalytics() {
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(
+        (event: NavigationEnd | any) => {
+          gtag('config', 'G-EYYLDEQ6LY',
+            {
+              page_path: event.urlAfterRedirects
+            }
+          );
+        });
   }
 
   setMode() {
