@@ -18,7 +18,7 @@ export class AkiraComponent implements OnInit {
   metaData = {
     name: 'Jetniphan Pukkham - @All about me.',
     description: 'Hello my name is Jetniphan Pukkham. This all about for me.',
-    image: 'profile.png'
+    image: 'assets/profile.png'
   }
 
   constructor(
