@@ -10,6 +10,7 @@ declare var gtag: any;
 })
 export class AppComponent {
   title = 'analytics';
+  mode: boolean = true;
 
   constructor(router: Router) {
     const navEndEvents = router.events.pipe(
@@ -22,7 +23,6 @@ export class AppComponent {
       });
     })
   }
-
 
   ngOnInit(): void {
 

@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { setMode } from 'ionicons/dist/types/stencil-public-runtime';
 import { Container, Main } from 'ng-particles';
-import { particles } from '../models/particles.model';
 
 @Component({
   selector: 'app-akira',
@@ -39,18 +39,33 @@ export class AkiraComponent implements OnInit {
       { name: 'og:description', content: this.metaData.description },
       { name: 'og:image', content: this.metaData.image }
     ]);
+    this.setMode();
   }
 
-  particlesLoaded(container: Container): void {
-    console.log(container);
+  setMode() {
+    const Mode = localStorage.getItem('mode');
+    if (Mode) {
+      this.mode = (Mode === 'darkmode')
+    }
+    else {
+      localStorage.setItem('mode', 'darkmode')
+    }
+    this.onMode()
   }
 
-  particlesInit(main: Main): void {
-    console.log(main);
+  clickmode() {
+    this.mode = !this.mode;
+    if (this.mode) {
+      localStorage.setItem('mode', "darkmode")
+    }
+    else {
+      localStorage.setItem('mode', "ligthmode")
+    }
+    this.onMode()
   }
+
 
   onMode() {
-    this.mode = !this.mode;
     /*======================= This mode dark =====================*/
     if (this.mode) {
       this._mode = new darkmode

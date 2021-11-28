@@ -5,7 +5,7 @@ import { InfoComponent } from './info/info.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: AkiraComponent
   },
   {
@@ -14,13 +14,9 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home'
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    redirectTo: ''
   }
+
 ];
 
 @NgModule({
