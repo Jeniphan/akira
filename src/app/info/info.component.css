@@ -1,25 +1,83 @@
+.header-dark {
+    background-color: #212838;
+    color: #fff;
+}
+
+.header-light {
+    background-color: #0d6efd;
+    color: #111827 !important;
+}
+
+.title h1 {
+    color: #fff
+}
+
+ul.menu {
+    display: flex;
+    justify-content: end;
+    margin-top: 12px;
+    list-style: none;
+    padding: 0;
+    float: right;
+}
+
+.menu {
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 0;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+ul.menu li a:hover {
+    border-bottom: 2px solid #c1baba;
+    padding-bottom: 0px;
+}
+
+.hero {
+    padding-top: 70px;
+}
+
 .main {
-    position: relative;
+    padding-top: 120px;
     background-color: #111827;
     color: #fff;
 }
 
-.main-light {
-    margin-top: 1rem;
-    position: relative;
+.maindark {
+    padding-top: 120px;
     background-color: rgb(233, 233, 233);
     color: black;
 }
 
-.container {
-    padding-top: 40px;
+a {
+    text-decoration: none;
 }
 
-.dark {
-    top: 10px;
-    right: 10px;
-    width: 100%;
-    position: absolute;
+.main span {
+    color: rgb(255 255 255 / 60%)
+}
+
+.main p {
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+.maindark p {
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: #111827;
 }
 
 .image {
@@ -38,21 +96,16 @@
     height: 20px;
 }
 
+.buttom-list,
+.list-mobile {
+    display: none !important;
+}
+
 .dark-icon {
-    background-color: #111827;
+    background-color: rgb(0 0 0 / 0%);
     width: 25px;
     height: 25px;
-}
-
-.btns {
-    position: fixed;
-}
-
-.ligth-icon {
-    background-color: #fff;
-    width: 25px;
-    height: 25px;
-    color: #111827;
+    color: #fff !important;
 }
 
 .btn-outline-primary {
@@ -82,8 +135,8 @@
 }
 
 .imge-ct-d {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 .detail-ct {
@@ -119,11 +172,6 @@ h4 {
 .content-profile {
     width: 80%
 }
-
-
-/* .color-icon {
-    color: #fff;
-} */
 
 .date,
 .name-p {
@@ -174,15 +222,59 @@ ion-icon {
 .personal,
 .educat,
 .exprerience,
-.skills,
-.contact {
+.skills {
     margin-top: 1rem;
 }
 
-.footer {
+.contact {
+    margin: 1rem 0 5rem 0;
+}
+
+.footer-dark {
+    background-color: #212838;
     margin-top: 1rem;
     margin-bottom: 10px;
     text-align: center;
+    text-justify: center;
+}
+
+.footer-light {
+    background-color: #0d6efd;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    text-justify: center;
+}
+
+.ml {
+    height: 150px;
+    padding-top: 65px;
+}
+
+.ml h1,
+.ml span {
+    color: #fff
+}
+
+.tl {
+    padding: 0 100px 0 100px;
+}
+
+.tl a {
+    color: #fff;
+}
+
+.icon-footer ion-icon {
+    color: #fff !important;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 10px;
+}
+
+.copy {
+    color: #fff !important;
+    height: 50px;
+    margin-top: 20px;
 }
 
 @media screen and (max-width:480px) {
@@ -201,7 +293,26 @@ ion-icon {
         display: flex !important;
         align-items: flex-start !important;
     }
-    .container {
-        padding-top: 20px;
+    .hero {
+        padding-top: 60px;
+    }
+    .menu,
+    .dark {
+        display: none !important;
+    }
+    .buttom-list {
+        display: unset !important;
+    }
+     ::ng-deep .list-menu-dark {
+        background-color: #111827 !important;
+    }
+     ::ng-deep .list-menu-light {
+        background-color: #fff !important;
+    }
+    .menu-font-light {
+        color: #111827 !important;
+    }
+    .menu-font-dark {
+        color: #fff !important;
     }
 }

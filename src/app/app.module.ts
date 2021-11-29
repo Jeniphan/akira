@@ -12,6 +12,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+
+
 
 import { AkiraComponent } from './akira/akira.component';
 import { InfoComponent } from './info/info.component';
@@ -38,6 +42,8 @@ import { IonicModule } from '@ionic/angular';
     FontAwesomeModule,
     MatListModule,
     NgParticlesModule,
+    MatToolbarModule,
+    MatMenuModule,
     IonicModule.forRoot()
   ],
   providers: [],

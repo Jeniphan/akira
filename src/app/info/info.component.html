@@ -1,18 +1,76 @@
-<div class="{{_mode.bgClass}}">
+<mat-toolbar class="{{this._mode.header}} fixed-top">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="title">
+                <h1>Akiira</h1>
+            </div>
+            <ul class="menu col">
+                <li>
+                    <a class="menu" href="aboutme/#home">home</a>
+                </li>
+                <li>
+                    <a class="menu" href="aboutme/#personal">personal profile</a>
+                </li>
+                <li>
+                    <a class="menu" href="aboutme/#education">education</a>
+                </li>
+                <li>
+                    <a class="menu" href="aboutme/#experience">experience</a>
+                </li>
+                <li>
+                    <a class="menu" href="aboutme/#skills">skills</a>
+                </li>
+                <li>
+                    <a class="menu" href="aboutme/#contact">contact</a>
+                </li>
+            </ul>
+            <div class="dark">
+                <div class="btns">
+                    <button type="button" class="btn btn-outline-primary" (click)="clickmode()">
+                        <ion-icon name="{{_mode.mode_icon}}" class="dark-icon"></ion-icon>
+                    </button>
+                </div>
+            </div>
 
-    <div class="dark d-flex flex-row-reverse">
-        <div class="btns">
-            <button type="button" class="btn btn-outline-primary" (click)="clickmode()">
-                <ion-icon name="{{_mode.mode_icon}}" class="{{_mode.iconClass}}"></ion-icon>
-            </button>
+            <div class="buttom-list">
+                <button mat-icon-button [matMenuTriggerFor]="menu_list" aria-label="Example icon-button with a menu">
+                    <ion-icon name="list-outline"></ion-icon>
+                </button>
+                <mat-menu #menu_list="matMenu" class="{{this._mode.listmenu}}">
+                    <button mat-menu-item>
+                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#home">home</a>
+                    </button>
+                    <button mat-menu-item>
+                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#personal">personal profile</a>
+                    </button>
+                    <button mat-menu-item>
+                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#education">education</a>
+                    </button>
+                    <button mat-menu-item>
+                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#experience">experience</a>
+                    </button>
+                    <button mat-menu-item>
+                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#skills">skills</a>
+                    </button>
+                    <button mat-menu-item>
+                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#contact">contact</a>
+                    </button>
+                    <button mat-menu-item class="btn btn-outline-primary" (click)="clickmode()">
+                        <ion-icon name="{{_mode.mode_icon}}" class="{{this._mode.listmenu_font}}"></ion-icon>
+                    </button>
+                </mat-menu>
+            </div>
         </div>
     </div>
 
+</mat-toolbar>
+
+<div class="{{_mode.bgClass}}" id="home">
     <div class="container">
         <div class="header row justify-content-center">
             <div class="col-md-4 detail-ct">
                 <div class="d-flex justify-content-center">
-                    <img class="image rounded-circle bg-white" src="assets/LINE_ALBUM_211017.jpg" alt="">
+                    <img class="image rounded-circle bg-white" src="assets/LINE_ALBUM_211017.jpg">
                 </div>
             </div>
             <div class="col-md-8 row align-items-center detail-ct">
@@ -24,19 +82,19 @@
             </div>
         </div>
 
-        <div class="contents">
+        <div class="contents hero" id="personal">
             <div class="personal">
-                <div class="d-flex align-items-center gap-3 two-b">
-                    <img class="imge-per " src="assets/man.png" alt="">
-                    <h2 class="text-per">personal profile</h2>
+                <div class="d-flex align-items-center gap-3 two-b ">
+                    <img class="imge-per " src="assets/man.png " alt=" ">
+                    <h2 class="text-per ">personal profile</h2>
                 </div>
 
-                <mat-divider class="divi"></mat-divider>
+                <mat-divider class="divi "></mat-divider>
 
                 <div class="row justify-content-center">
                     <div class="content-profile row align-items-start">
-                        <div class="col-md-6 detail-ct">
-                            <h3 class="who">who am i</h3>
+                        <div class="col-md-6 detail-ct ">
+                            <h3 class="who ">who am i</h3>
                             <span>
                                 Hello. My name is Jetniphan Pukkham, everyone call me Jaay.
                                 I'm studying at King Mongkut's University of Technology Thonburi. My major was
@@ -47,7 +105,7 @@
                         </div>
 
                         <div class="col-md-6 detail-ct">
-                            <h3 class="who">presonal</h3>
+                            <h3 class="who ">presonal</h3>
                             <span>
                                 A electronic engineering student with
                                 hands-on experience in electronic
@@ -61,10 +119,10 @@
                 </div>
             </div>
 
-            <div class="educat">
+            <div class="educat hero" id="education">
                 <div class="d-flex align-items-center gap-3 two-b">
-                    <img class="imge-ed " src="assets/education.png" alt="">
-                    <h2 class="text-ed">Education</h2>
+                    <img class="imge-ed " src="assets/education.png">
+                    <h2 class="text-ed ">Education</h2>
                 </div>
 
                 <mat-divider class="divi"></mat-divider>
@@ -110,7 +168,7 @@
                             <div class="school-data">
                                 <div class="d-flex align-items-center top-icon">
                                     <div>
-                                        <ion-icon name="today-outline" class="color-icon"></ion-icon>
+                                        <ion-icon name="today-outline " class="color-icon"></ion-icon>
                                     </div>
                                     <div class="date">
                                         <span>2015 - 2018</span>
@@ -139,15 +197,15 @@
                 </div>
             </div>
 
-            <div class=" exprerience ">
-                <div class="d-flex align-items-center gap-3 two-b">
-                    <img class="imge-ex " src="assets/experience.png " alt=" ">
-                    <h2 class="text-ex ">experience</h2>
+            <div class="exprerience hero" id="experience">
+                <div class="d-flex align-items-center gap-3 two-b ">
+                    <img class="imge-ex" src="assets/experience.png">
+                    <h2 class="text-ex">experience</h2>
                 </div>
 
                 <mat-divider class="divi"></mat-divider>
 
-                <div class="row justify-content-center ">
+                <div class="row justify-content-center">
                     <div class="content-ex row align-items-start">
                         <div class="col detail-ct">
                             <h3 class="work-ex">project experience</h3>
@@ -170,7 +228,7 @@
                                 </div>
                                 <div class="d-flex align-items-start top-icon">
                                     <div>
-                                        <ion-icon name="book-outline" class="color-icon">
+                                        <ion-icon name="book-outline" class="color-icon ">
                                         </ion-icon>
                                     </div>
                                     <div class="name-p">
@@ -260,8 +318,10 @@
                                         <ion-icon name="accessibility-outline" class="color-icon"></ion-icon>
                                     </div>
                                     <div class="name-p">
-                                        <span>International Conference on Power, Energy and Innovation
-                                            (ICPEI), Ching Mai, THAILAND</span>
+                                        <span>
+                                            International Conference on Power, Energy and Innovation
+                                            (ICPEI), Ching Mai, THAILAND
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-start top-icon">
@@ -279,7 +339,7 @@
                         </div>
 
                         <div class="col detail-ct">
-                            <div class="row">
+                            <div class="row ">
                                 <h3 class="work-ex">Activity experience</h3>
                                 <div class="two-b">
                                     <div class="d-flex align-items-center top-icon">
@@ -380,15 +440,15 @@
                 </div>
             </div>
 
-            <div class="skills ">
+            <div class="skills hero" id="skills">
                 <div class="d-flex align-items-center gap-3 two-b">
-                    <img class="imge-es " src="assets/skills.png " alt=" ">
-                    <h2 class="text-sk ">skils</h2>
+                    <img class="imge-es" src="assets/skills.png" alt="">
+                    <h2 class="text-sk">skils</h2>
                 </div>
 
                 <mat-divider class="divi"></mat-divider>
 
-                <div class="row justify-content-center ">
+                <div class="row justify-content-center">
                     <div class="content-sk row align-items-start">
                         <div class="col-md-4 detail-ct">
                             <h3 class="developer">Web Developer skills</h3>
@@ -520,7 +580,7 @@
                                 </div>
                                 <div class="d-flex align-items-center top-icon">
                                     <div>
-                                        <ion-icon name="game-controller-outline" class="color-icon"></ion-icon>
+                                        <ion-icon name="game-controller-outlin " class="color-icon"></ion-icon>
                                     </div>
                                     <div class="name-p">
                                         <span>ESP32.</span>
@@ -542,69 +602,159 @@
                 </div>
             </div>
 
-            <div class="contact ">
+            <div class="contact hero" id="contact">
                 <div class="d-flex align-items-center gap-3 two-b">
-                    <img class="imge-ct " src="assets/contact.png " alt=" ">
-                    <h2 class="text-ct ">contact</h2>
+                    <img class="imge-ct" src="assets/contact.png " alt="">
+                    <h2 class="text-ct">contact</h2>
                 </div>
 
                 <mat-divider class="divi"></mat-divider>
 
-                <div class="row justify-content-center ">
-                    <div class="content-ct ">
-
-                        <div class="d-flex justify-content-center detail-ct">
-                            <div class="d-flex align-items-center">
-                                <img class="imge-ct-d" src="assets/email.png" alt=" ">
-                                <a href="mailto:jetniphan.2407@mail.kmutt.ac.th" class="name-p">Jetniphan.2407@mail.kmutt.ac.th</a>
-                            </div>
-                        </div>
-
-                        <div class="d-flex justify-content-center detail-ct">
-                            <a href="https://github.com/Jeniphan">
-                                <div class="d-flex align-items-center">
-                                    <img class="imge-ct-d" src="assets/github.png" alt=" ">
-                                    <span class="name-p">Jeniphan</span>
+                <div class="row justify-content-center">
+                    <div class="content-ct">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="detail-ct">
+                                    <div class="d-flex align-items-center">
+                                        <img class="imge-ct-d" src="assets/email.png" alt="">
+                                        <a href="mailto:jetniphan.2407@mail.kmutt.ac.th" class="name-p">
+                                            <p>
+                                                Email
+                                            </p>
+                                            <span>
+                                                Jetniphan.2407@mail.kmutt.ac.th
+                                            </span>
+                                        </a>
+                                    </div>
                                 </div>
-                            </a>
 
-                        </div>
-
-                        <div class="d-flex justify-content-center detail-ct">
-                            <a href="https://www.facebook.com/jeniphan.pukkham">
-                                <div class="d-flex align-items-center">
-                                    <img class="imge-ct-d" src="assets/facebook.png" alt=" ">
-                                    <span class="name-p">Jeniphan Pukkham</span>
+                                <div class="detail-ct">
+                                    <div class="d-flex align-items-center">
+                                        <img class="imge-ct-d" src="assets/github.png" alt="">
+                                        <a href="https://github.com/Jeniphan" class="name-p">
+                                            <p>
+                                                Github
+                                            </p>
+                                            <span>Jeniphan</span>
+                                        </a>
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
 
-                        <div class="d-flex justify-content-center detail-ct">
-                            <div class="d-flex align-items-center">
-                                <a href="https://www.linkedin.com/in/jetniphan-pukkham-957671212/">
-                                    <img class="imge-ct-d" src="assets/linkedin.png" alt=" ">
-                                    <span class="name-p">Jetniphan Pukkham</span>
-                                </a>
+                                <div class="d-flex detail-ct">
+                                    <div class="d-flex align-items-center">
+                                        <img class="imge-ct-d" src="assets/facebook.png" alt="">
+                                        <a href="https://www.facebook.com/jeniphan.pukkham">
+                                            <div class="d-flex align-items-center" class="name-p">
+                                                <p>
+                                                    Facebook
+                                                </p>
+                                                <span>Jeniphan Pukkham</span>
+                                            </div>
+                                        </a>
+                                    </div>
 
+                                </div>
+
+                                <div class="detail-ct">
+                                    <div class="d-flex align-items-center">
+                                        <img class="imge-ct-d" src="assets/linkedin.png" alt="">
+                                        <a href="https://www.linkedin.com/in/jetniphan-pukkham-957671212/" class="name-p">
+                                            <p>
+                                                Linkedin
+                                            </p>
+                                            <span>Jetniphan Pukkham</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div class="detail-ct">
+                                    <div class="d-flex align-items-center">
+                                        <img class="imge-ct-d" src="assets/telephone.png" alt="">
+                                        <a class="name-p" href="Tel:+6680-915-3786">
+                                            <p>
+                                                Phone number
+                                            </p>
+                                            <span>080 - 915 - 3786</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 row align-items-center">
+                                <div class="text-center">
+                                    <h1>
+                                        Download my resume.
+                                    </h1>
+                                    <a href="assets/Jetniphan.pdf" download>
+                                        <button mat-raised-button color="primary" class="align-items-center">
+                                            Download resume
+                                            <ion-icon name="arrow-down-outline"></ion-icon>
+                                        </button>
+                                    </a>
+
+                                </div>
                             </div>
                         </div>
-
-                        <div class="d-flex justify-content-center detail-ct">
-                            <div class="d-flex align-items-center">
-                                <img class="imge-ct-d" src="assets/telephone.png" alt=" ">
-                                <span class="name-p">080 - 915 - 3786</span>
-                            </div>
-                        </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            Copyright © Jetniphan Pukkham. All right reserved.
-        </footer>
 
     </div>
+    <footer class="{{this._mode.footer}}">
+        <div class="row">
+            <div class="col-md-4 ml">
+                <h1>
+                    Akiira
+                </h1>
+                <span>
+                    Frontend Developer.
+                </span>
+            </div>
+            <div class="col-md-4 ml">
+                <div class="row tl">
+                    <a class="col-md-4" href="aboutme/#experience">
+                        <h5>
+                            Experience
+                        </h5>
+                    </a>
 
+                    <a class="col-md-4" href="aboutme/#skills">
+                        <h5>
+                            Skills
+                        </h5>
+                    </a>
+
+                    <a class="col-md-4" href="aboutme/#contact">
+                        <h5>
+                            Contact
+                        </h5>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 icon-footer ml">
+                <a href="https://www.facebook.com/jeniphan.pukkham">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://github.com/Jeniphan">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="mailto:jetniphan.2407@mail.kmutt.ac.th">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/jetniphan-pukkham-957671212/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="tel:+6680-915-3786">
+                    <ion-icon name="call-outline"></ion-icon>
+                </a>
+            </div>
+        </div>
+        <div class="copy">
+            Copyright © Jetniphan Pukkham. All right reserved.
+        </div>
+    </footer>
 </div>

@@ -1,12 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-info',
@@ -19,6 +11,7 @@ export class InfoComponent implements OnInit {
   isOpen = true;
   mode: boolean = true;
   _mode = new darkmode;
+  liststat: boolean = false;
 
   ngOnInit(): void {
     this.setMode();
@@ -65,18 +58,28 @@ export class InfoComponent implements OnInit {
       this._mode = new lightmode
     }
   }
+
+  onlist() {
+    this.liststat = !this.liststat;
+  }
 }
 
 export class lightmode {
+  header = "header-light"
   mode_icon: string = "moon-outline";
-  bgClass = "main-ligth";
-  iconClass = "ligth-icon";
+  bgClass = "maindark";
   fontButtom = "button-light";
+  listmenu = "list-menu-light";
+  listmenu_font = "menu-font-light";
+  footer = "footer-light";
 }
 
 export class darkmode {
+  header = "header-dark"
   mode_icon: string = "sunny-outline";
   bgClass = "main";
-  iconClass = "dark-icon";
   fontButtom = "button";
+  listmenu = "list-menu-dark";
+  listmenu_font = "menu-font-dark";
+  footer = "footer-dark";
 }
