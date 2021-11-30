@@ -2,26 +2,28 @@
     <div class="container">
         <div class="d-flex align-items-center justify-content-between">
             <div class="title">
-                <h1>Akiira</h1>
+                <a [routerLink]="['/aboutme']" fragment="home">
+                    <h1>Akiira</h1>
+                </a>
             </div>
             <ul class="menu col">
                 <li>
-                    <a class="menu" href="aboutme/#home">home</a>
+                    <a class="menu" [routerLink]="['']">home</a>
                 </li>
                 <li>
-                    <a class="menu" href="aboutme/#personal">personal profile</a>
+                    <a class="menu" [routerLink]="['/aboutme']" fragment="personal">personal profile</a>
                 </li>
                 <li>
-                    <a class="menu" href="aboutme/#education">education</a>
+                    <a class="menu" [routerLink]="['/aboutme']" fragment="education">education</a>
                 </li>
                 <li>
-                    <a class="menu" href="aboutme/#experience">experience</a>
+                    <a class="menu" [routerLink]="['/aboutme']" fragment="experience">experience</a>
                 </li>
                 <li>
-                    <a class="menu" href="aboutme/#skills">skills</a>
+                    <a class="menu" [routerLink]="['/aboutme']" fragment="skills">skills</a>
                 </li>
                 <li>
-                    <a class="menu" href="aboutme/#contact">contact</a>
+                    <a class="menu" [routerLink]="['/aboutme']" fragment="contact">contact</a>
                 </li>
             </ul>
             <div class="dark">
@@ -38,22 +40,26 @@
                 </button>
                 <mat-menu #menu_list="matMenu" class="{{this._mode.listmenu}}">
                     <button mat-menu-item>
-                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#home">home</a>
+                        <a class="{{this._mode.listmenu_font}}" [routerLink]="['/aboutme']" fragment="home">home</a>
                     </button>
                     <button mat-menu-item>
-                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#personal">personal profile</a>
+                        <a class="{{this._mode.listmenu_font}}" [routerLink]="['/aboutme']" fragment="personal">personal
+                            profile</a>
                     </button>
                     <button mat-menu-item>
-                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#education">education</a>
+                        <a class="{{this._mode.listmenu_font}}" [routerLink]="['/aboutme']"
+                            fragment="education">education</a>
                     </button>
                     <button mat-menu-item>
-                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#experience">experience</a>
+                        <a class="{{this._mode.listmenu_font}}" [routerLink]="['/aboutme']"
+                            fragment="experience">experience</a>
                     </button>
                     <button mat-menu-item>
-                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#skills">skills</a>
+                        <a class="{{this._mode.listmenu_font}}" [routerLink]="['/aboutme']" fragment="skills">skills</a>
                     </button>
                     <button mat-menu-item>
-                        <a class="{{this._mode.listmenu_font}}" href="aboutme/#contact">contact</a>
+                        <a class="{{this._mode.listmenu_font}}" [routerLink]="['/aboutme']"
+                            fragment="contact">contact</a>
                     </button>
                     <button mat-menu-item class="btn btn-outline-primary" (click)="clickmode()">
                         <ion-icon name="{{_mode.mode_icon}}" class="{{this._mode.listmenu_font}}"></ion-icon>
@@ -168,7 +174,7 @@
                             <div class="school-data">
                                 <div class="d-flex align-items-center top-icon">
                                     <div>
-                                        <ion-icon name="today-outline " class="color-icon"></ion-icon>
+                                        <ion-icon name="today-outline" class="color-icon"></ion-icon>
                                     </div>
                                     <div class="date">
                                         <span>2015 - 2018</span>
@@ -580,7 +586,7 @@
                                 </div>
                                 <div class="d-flex align-items-center top-icon">
                                     <div>
-                                        <ion-icon name="game-controller-outlin " class="color-icon"></ion-icon>
+                                        <ion-icon name="game-controller-outline" class="color-icon"></ion-icon>
                                     </div>
                                     <div class="name-p">
                                         <span>ESP32.</span>
@@ -715,19 +721,19 @@
             </div>
             <div class="col-md-4 ml">
                 <div class="row tl">
-                    <a class="col-md-4" href="aboutme/#experience">
+                    <a class="col-md-4" [routerLink]="['/aboutme']" fragment="experience">
                         <h5>
                             Experience
                         </h5>
                     </a>
 
-                    <a class="col-md-4" href="aboutme/#skills">
+                    <a class="col-md-4" [routerLink]="['/aboutme']" fragment="skills">
                         <h5>
                             Skills
                         </h5>
                     </a>
 
-                    <a class="col-md-4" href="aboutme/#contact">
+                    <a class="col-md-4" [routerLink]="['/aboutme']" fragment="contact">
                         <h5>
                             Contact
                         </h5>
