@@ -17,8 +17,6 @@ export class InfoComponent implements OnInit {
     this.setMode();
   }
 
-
-
   Date: string = 'Aprill, 2018 - Present'
   university: string = `King Mongkut's University of Technology Thonburi`
   major: string = 'Electronic and Telecommunication Dept.'
